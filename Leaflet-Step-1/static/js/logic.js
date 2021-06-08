@@ -17,29 +17,7 @@ L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 var earthquake_url = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson"
 
 d3.json(earthquake_url, function(data) {
-  var earthquakes = L.geoJSON(data.features, {
-    onEachFeature: addPopup,
-    pointToLayer: addMarker
-  });
-
-  createMap(earthquakes) 
-})
-
-function addMarker(feature, location) {
-  var options = {
-    stroke: false,
-    fillOpacity: markerOpacity(feature.properties.mag),
-    color: markerColor(feature.properties.mag),
-    fillColor: markerColor (feature.properties.mag),
-    radius: markerSize(feature.properties.mag)
-  }
-
-  return L.circleMarker(location, options);
-
-}
-
-function addPopup(feature, layer) {}
-
+  
 
 
 
