@@ -82,7 +82,7 @@ d3.json(earthquake_url).then(function(data) {
       };
     },
     onEachFeature: function(feature, layer) {
-      layer.bindPopup("Magnitude:<br>" + feature.properties.mag + "<br>Place:<br>" + feature.properties.place)
+      layer.bindPopup("<strong>Magnitude:<br></strong>" + feature.properties.mag + "<strong><br>Place:<br></strong>" + feature.properties.place)
     },
     pointToLayer: function(geoJsonPoint, latlng) {
       return L.circleMarker(latlng);
