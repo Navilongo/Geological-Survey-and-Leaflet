@@ -1,7 +1,7 @@
 // Creating map object
 var myMap = L.map("map", {
-    center: [19.4914, -118.2437],
-    zoom: 3
+    center: [19.4914, 132.5510],
+    zoom: 4
 });
   
 // Adding tile layer
@@ -82,7 +82,7 @@ d3.json(earthquake_url).then(function(data) {
       };
     },
     onEachFeature: function(feature, layer) {
-      layer.bindPopup("Mag" + feature.properties.mag + "Place: " + feature.properties.place)
+      layer.bindPopup("Magnitude: " + feature.properties.mag + " Place: " + feature.properties.place)
     },
     pointToLayer: function(geoJsonPoint, latlng) {
       return L.circleMarker(latlng);
