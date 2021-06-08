@@ -1,7 +1,7 @@
 // Creating map object
 var myMap = L.map("map", {
-    center: [34.0522, -118.2437],
-    zoom: 5
+    center: [19.4914, -118.2437],
+    zoom: 3
 });
   
 // Adding tile layer
@@ -43,6 +43,33 @@ function makeRadius(magnitude) {
   }
 };
 
+function chooseColor (depth) {
+  if (depth < 10) {
+    var color = "#fef0d9"
+    return color;
+  }
+  else if (depth >= 10 && depth < 50) {
+    var color = "#fdd49e"
+    return color;
+  }
+  else if (depth >= 50 && depth < 100) {
+    var color = "#fdbb84"
+    return color;
+  }
+  else if (depth >= 100 && depth < 300) {
+    var color = "#fc8d59"
+    return color;
+  }
+  else if (depth >= 300 && depth < 500) {
+    var color = "#e34a33"
+    return color;
+  }
+  else {
+    var color = "#b30000"
+    return color;
+  }
+}
+
 d3.json(earthquake_url).then(function(data) {
   geojson = L.geoJson(data, {
     style: function(feature) {
@@ -54,12 +81,12 @@ d3.json(earthquake_url).then(function(data) {
         radius: makeRadius(feature.properties.mag)
       };
     },
-    OneachFeature: function(feature, layer) {
+    onEachFeature: function(feature, layer) {
       layer.bindPopup("Mag" + feature.properties.mag + "Place: " + feature.properties.place)
     },
     pointToLayer: function(geoJsonPoint, latlng) {
       return L.circleMarker(latlng);
     }
-  }).addTo(MyMap);
+  }).addTo(myMap);
 
 })
