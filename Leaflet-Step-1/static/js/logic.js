@@ -91,7 +91,7 @@ d3.json(earthquake_url).then(function(data) {
 
   var legend = L.control({position: "bottomright"});
 legend.onAdd = function() {
-  var div = L.DomUtil.create("div", "info legend");
+  var div = L.DomUtil.create("div", "info-legend");
   var limits = [10, 50, 100, 300, 500, 700];
   var colors = ["#f6ddcc", "#e59866", "#d35400", "#a04000", "#6e2c00", "#17202a"]
   var lables = [];
@@ -103,10 +103,9 @@ legend.onAdd = function() {
     lables.push("<li style=\"background-color: " + colors[index] + "\"> + limits [index] + </li>");
   })
 
-  div.innerHTML += "<ul>" + labels.join("") + "</ul>";
-  return div;
-  }; 
-  legend.addTo(myMap);
+    div.innerHTML += "<ul>" + labels.join("") + "</ul>";
+    return div;
+    }; legend.addTo(myMap);
 
 })
 
