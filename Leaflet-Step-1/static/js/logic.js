@@ -45,27 +45,27 @@ function makeRadius(magnitude) {
 
 function chooseColor (depth) {
   if (depth < 10) {
-    var color = "#fef0d9"
+    var color = "#f6ddcc"
     return color;
   }
   else if (depth >= 10 && depth < 50) {
-    var color = "#fdd49e"
+    var color = "#e59866"
     return color;
   }
   else if (depth >= 50 && depth < 100) {
-    var color = "#fdbb84"
+    var color = "#d35400"
     return color;
   }
   else if (depth >= 100 && depth < 300) {
-    var color = "#fc8d59"
+    var color = "#a04000"
     return color;
   }
   else if (depth >= 300 && depth < 500) {
-    var color = "#e34a33"
+    var color = "#6e2c00"
     return color;
   }
   else {
-    var color = "#b30000"
+    var color = "#17202a"
     return color;
   }
 }
