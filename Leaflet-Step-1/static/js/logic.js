@@ -89,9 +89,7 @@ d3.json(earthquake_url).then(function(data) {
     }
   }).addTo(myMap);
 
-})
-
-var legend = L.control({position: "bottomright"});
+  var legend = L.control({position: "bottomright"});
 legend.onAdd = function() {
   var div = L.DomUtil.create("div", "info legend");
   var limits = [10, 50, 100, 300, 500, 700];
@@ -107,4 +105,10 @@ legend.onAdd = function() {
 
   div.innerHTML += "<ul>" + labels.join("") + "</ul>";
   return div;
-}
+  }; 
+  legend.addTo(myMap);
+
+})
+
+
+
