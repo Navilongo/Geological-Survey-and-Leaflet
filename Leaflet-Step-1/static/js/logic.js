@@ -105,5 +105,6 @@ legend.onAdd = function() {
     lables.push("<li style=\"background-color: " + colors[index] + "\"> + limits [index] + </li>");
   })
 
- 
+  div.innerHTML += "<ul>" + labels.join("") + "</ul>";
+  return div;
 }
