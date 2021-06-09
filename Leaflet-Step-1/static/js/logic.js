@@ -92,7 +92,7 @@ d3.json(earthquake_url).then(function(data) {
   var legend = L.control({position: "bottomright"});
 legend.onAdd = function() {
   var div = L.DomUtil.create("div", "info-legend");
-  var limits = ["10 to 49", 50, 100, 300, 500, 700];
+  var limits = ["10 to 49", "50 to 99", "100 to 299", "300 to 499", "500 to 699", "700 and deeper"];
   var colors = ["#f6ddcc", "#e59866", "#d35400", "#a04000", "#873600", "#5A2400"]
   var labels = [];
   
