@@ -20,3 +20,5 @@ where these earthquakes have occurred.
 To better represent the data, and to avoid all merging together, we have used their magnitude to influence the radius of the marker within
 our map. We have also taken the depth of the earthquake and assigned it one out of 6 colors to indicate the depth of the earthquake
 occurrence. 
+
+![Visualization of Earthquakes Map]
