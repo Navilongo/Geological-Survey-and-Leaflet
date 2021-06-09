@@ -100,5 +100,10 @@ legend.onAdd = function() {
   
   var legendInfo = "<h1>Earthquake Depths Legend</h1>"
 
-  
+  div.innerHTML = legendInfo;
+  limits.forEach(function(limit, index){
+    lables.push("<li style=\"background-color: " + colors[index] + "\"> + limits [index] + </li>");
+  })
+
+ 
 }
