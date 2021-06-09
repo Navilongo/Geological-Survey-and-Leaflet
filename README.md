@@ -21,4 +21,4 @@ To better represent the data, and to avoid all merging together, we have used th
 our map. We have also taken the depth of the earthquake and assigned it one out of 6 colors to indicate the depth of the earthquake
 occurrence. 
 
-![Visualization of Earthquakes Map]
+![Image of Map](Visualization of Earthquakes Map.jpeg)
