@@ -61,11 +61,11 @@ function chooseColor (depth) {
     return color;
   }
   else if (depth >= 300 && depth < 500) {
-    var color = "#6e2c00"
+    var color = "#873600"
     return color;
   }
   else {
-    var color = "#17202a"
+    var color = "#5A2400"
     return color;
   }
 }
@@ -93,7 +93,7 @@ d3.json(earthquake_url).then(function(data) {
 legend.onAdd = function() {
   var div = L.DomUtil.create("div", "info-legend");
   var limits = [10, 50, 100, 300, 500, 700];
-  var colors = ["#f6ddcc", "#e59866", "#d35400", "#a04000", "#6e2c00", "#17202a"]
+  var colors = ["#f6ddcc", "#e59866", "#d35400", "#a04000", "#873600", "#5A2400"]
   var labels = [];
   
   var legendInfo = "<h1>Earthquake Depths Legend</h1>"
